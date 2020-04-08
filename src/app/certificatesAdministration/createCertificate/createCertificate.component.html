@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Certificate</title>
+</head>
+<body>
+<br>
+<br>
+<br>
+<div class="container container-table input-group input-group-lg">
+  <form>
+    <div class="form-group" style="margin-bottom:5px">
+      <h2 style="color:#55cabb">Create certificate</h2>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <h5 style="color:#33ccbb">Select Issuer</h5>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+    <select class="form-control">
+      <option>root</option>
+    </select>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <h5 style="color:#33ccbb">Select certificate type</h5>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <select class="form-control">
+        <option>Intermediate</option>
+        <option>End-entity</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <h5 style="color:#33ccbb">Fill info about subject</h5>
+    </div>
+    <div class="form-group"  style="margin-bottom: 5px">
+      <input type="text" id="cn" class="form-control" placeholder="CN" required>
+    </div>
+    <div class="form-group "  style="margin-bottom: 5px">
+      <input type="text" id="surname" class="form-control" placeholder="SURNAME" required>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <input type="text" id="givenname" class="form-control" placeholder="GIVENNAME" required>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <input type="text" id="o" class="form-control" placeholder="O" required>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <input type="text" id="ou" class="form-control" placeholder="OU" required>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <input type="text" id="c" class="form-control" placeholder="C" required>
+    </div>
+    <div class="form-group" style="margin-bottom: 5px">
+      <input type="text" id="e" class="form-control" placeholder="E" required>
+    </div>
+    <div class="form-group" style="margin-top: 20px">
+      <button class="btn btn-success" type="submit">Create</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
