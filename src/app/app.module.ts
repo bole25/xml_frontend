@@ -9,15 +9,19 @@ import {CreateCertificateService} from './certificatesAdministration/createCerti
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {showCertificatesComponent} from './showCertificates/showCertificates.component';
+import { ShowCertificatesService } from './showCertificates/showSertifikates.service';
 
 const appRoutes: Routes = [
   { path: 'createCertificate', component: CreateCertificateComponent },
+  { path: 'showCertificates', component: showCertificatesComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateCertificateComponent,
+    showCertificatesComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,7 @@ const appRoutes: Routes = [
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [CreateCertificateService
+  providers: [CreateCertificateService,ShowCertificatesService
   ],
   bootstrap: [AppComponent]
 })
