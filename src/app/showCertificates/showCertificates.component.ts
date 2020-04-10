@@ -1,6 +1,7 @@
 import {ActivatedRoute, Router} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
 import {ShowCertificatesService} from './showSertifikates.service';
+import {CertificateDTO} from '../model/dto/CertificateDTO';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -9,14 +10,13 @@ import {ShowCertificatesService} from './showSertifikates.service';
 })
 
 export class showCertificatesComponent implements OnInit {
-    public certificates: Set<String>;
+    public certificates: Set<CertificateDTO>;
   constructor(private router: Router, private route: ActivatedRoute,private service: ShowCertificatesService) {
-    this.certificates = new Set<String>();
+    this.certificates = new Set<CertificateDTO>();
   }
 
   ngOnInit(): void {
     this.service.getCertifikates().subscribe(data => {this.certificates = data; });
-    console.log(this.certificates);
   }
 
 }

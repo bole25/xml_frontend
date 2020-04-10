@@ -1,9 +1,22 @@
-<table border="1px">
-    <tr>
-      <th>Name</th>
-  
-    </tr>
+<br>
+<br>
+	<h1>Table of certificates</h1>
+<br>
+<br>
+<br>
+<br>
+<table class="table">
+    <thead>
+    	<tr>
+    		<th>IssuerName</th>
+      		<th>valid</th>
+    	</tr>
+	</thead>
+	<tbody>
     <tr *ngFor="let cert of certificates; let i = index">
-      <td>{{cert}}</td>
+      <td>{{cert.issuerName}}</td>
+      <td>{{cert.subjectName}}</td>
+      <td><button>Some button</button></td>
     </tr>
-  </table>
+    </tbody>
+ </table>

@@ -1,6 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
+import {CertificateDTO} from '../model/dto/CertificateDTO';
 
 
 
@@ -13,6 +14,6 @@ export class ShowCertificatesService {
   }
 
   public getCertifikates(): Observable<any>{
-    return this.http.get(this.createCertificateUrl);
+    return this.http.get<Set<CertificateDTO>>(this.createCertificateUrl);
   }
 }
