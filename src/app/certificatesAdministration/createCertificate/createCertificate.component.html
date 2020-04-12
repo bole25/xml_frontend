@@ -14,20 +14,23 @@
       <h2 style="color:#55cabb">Create certificate</h2>
     </div>
     <div class="form-group" style="margin-bottom: 5px">
-      <h5 style="color:#33ccbb">Select Issuer</h5>
+      <h5 style="color:#33ccbb">Select certificate type</h5>
     </div>
-    <div class="form-group" style="margin-bottom: 5px">
-    <select class="form-control">
-      <option>root</option>
+    <div class="form-group" (change)="reloadParents()" style="margin-bottom: 5px">
+    <select class="form-control" id="certType">
+      <option value="selfsigned">Self Signed</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="endentity">End-entity</option>
     </select>
     </div>
     <div class="form-group" style="margin-bottom: 5px">
-      <h5 style="color:#33ccbb">Select certificate type</h5>
+      <h5 style="color:#33ccbb">Select issuer</h5>
     </div>
     <div class="form-group" style="margin-bottom: 5px">
-      <select class="form-control">
-        <option>Intermediate</option>
-        <option>End-entity</option>
+      <select class="form-control" id="ali">
+        <option *ngFor="let clc of aliases; let i = index" [value]=clc>
+          {{clc}}
+        </option>
       </select>
     </div>
     <div class="form-group" style="margin-bottom: 5px">
