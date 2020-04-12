@@ -9,9 +9,9 @@ import {CertificateDTO} from '../model/dto/CertificateDTO';
   templateUrl: './showCertificates.component.html'
 })
 
-export class showCertificatesComponent implements OnInit {
+export class ShowCertificatesComponent implements OnInit {
     public certificates: Set<CertificateDTO>;
-  constructor(private router: Router, private route: ActivatedRoute,private service: ShowCertificatesService) {
+    constructor(private router: Router, private route: ActivatedRoute, private service: ShowCertificatesService) {
     this.certificates = new Set<CertificateDTO>();
   }
 

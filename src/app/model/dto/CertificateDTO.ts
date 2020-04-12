@@ -1,4 +1,5 @@
 export class CertificateDTO {
-  issuerName: string
+  issuerName: string;
   subjectName: string;
+  alias: string;
 }
