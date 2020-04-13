@@ -50,7 +50,12 @@ export class CreateCertificateComponent implements OnInit {
     const sel1 = e1.selectedIndex;
     const opt1 = e1.options[sel1];
     const alias = opt1.value;
-    this.service.createCertificate(this.subjectData, CurValue, alias).subscribe(result => {
+
+    const e2 = (document.getElementById('templateoption')) as HTMLSelectElement;
+    const sel2 = e.selectedIndex;
+    const opt2 = e.options[sel];
+    const tempate = opt2.value;
+    this.service.createCertificate(this.subjectData, CurValue, alias, tempate).subscribe(result => {
       alert('Successfully');
       location.reload();
     });

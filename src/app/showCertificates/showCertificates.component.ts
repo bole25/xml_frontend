@@ -19,4 +19,7 @@ export class ShowCertificatesComponent implements OnInit {
     this.service.getCertifikates().subscribe(data => {this.certificates = data; });
   }
 
+  onClickMe(c):void {
+    this.service.unvalidateCertificate(c);
+  }
 }
