@@ -17,7 +17,7 @@
     <tr *ngFor="let cert of certificates; let i = index">
       <td>{{i+1}}</td>
       <td>{{cert.alias}}</td>
-      <td><button>Details</button></td>
+      <td><button class = "btn btn-edit" (click) = "displayCertificate(cert.alias)">Details</button></td>
     </tr>
     </tbody>
  </table>

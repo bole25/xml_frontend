@@ -11,10 +11,13 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ShowCertificatesComponent} from './showCertificates/showCertificates.component';
 import { ShowCertificatesService } from './showCertificates/showSertifikates.service';
+import { ShowCertificateService } from './showCertificates/showCertificate/showCertificate.service';
+import { ShowCertificateComponent} from './showCertificates/showCertificate/showCertificate.component';
 
 const appRoutes: Routes = [
   { path: 'createCertificate', component: CreateCertificateComponent },
   { path: 'showCertificates', component: ShowCertificatesComponent },
+  { path: 'showCertificates/each', component: ShowCertificateComponent },
 ];
 
 @NgModule({
@@ -22,6 +25,7 @@ const appRoutes: Routes = [
     AppComponent,
     CreateCertificateComponent,
     ShowCertificatesComponent,
+    ShowCertificateComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,7 @@ const appRoutes: Routes = [
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [CreateCertificateService, ShowCertificatesService
+  providers: [CreateCertificateService, ShowCertificatesService,ShowCertificateService
   ],
   bootstrap: [AppComponent]
 })
