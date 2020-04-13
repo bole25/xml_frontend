@@ -1,0 +1,33 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <p>Alias:   </p>
+    <p>{{certificate.alias}}</p>
+    <br>
+    <p>SubjectName:   </p>
+    <p>{{certificate.subjectName}}</p>
+    <br>
+    <p>IssuerName:   </p>
+    <p>{{certificate.issuerName}}</p>
+    <br>
+    <p>Type:   </p>
+    <p>{{certificate.type}}</p>
+    <br>
+    <p>ParentAlias:   </p>
+    <p>{{certificate.parentAlias}}</p>
+    <br>
+    <br>
+    <br>
+    <button id = "btnFile" class = "btn btn-edit" (click) = "downloadFile(certificate.alias)">Download file</button>
+    <p id = "text" hidden>Are you sure?</p>
+    <button id = "btnYes" hidden class = "btn btn-success"(click) = "yesAction()">
+        <a href=".//../../../assets/cert.cer" target="_self" 
+         download=".//../../../assets/cert.cer">Yes</a>
+    </button>
+    <button id = "btnNo" hidden class = "btn btn-danger" (click) = "noAction()">No</button>
+    
+</div>

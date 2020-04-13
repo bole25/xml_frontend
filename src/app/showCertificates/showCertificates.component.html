@@ -8,15 +8,16 @@
 <table class="table">
     <thead>
     	<tr>
-    		<th>IssuerName</th>
-      		<th>valid</th>
+    		<th>#</th>
+        <th>Alias</th>
+        <th>Details</th>
     	</tr>
 	</thead>
 	<tbody>
     <tr *ngFor="let cert of certificates; let i = index">
-      <td>{{cert.issuerName}}</td>
-      <td>{{cert.subjectName}}</td>
-      <td><button>Some button</button></td>
+      <td>{{i+1}}</td>
+      <td>{{cert.alias}}</td>
+      <td><button class = "btn btn-edit" (click) = "displayCertificate(cert.alias)">Details</button></td>
     </tr>
     </tbody>
  </table>

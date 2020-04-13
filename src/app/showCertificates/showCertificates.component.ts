@@ -19,4 +19,9 @@ export class ShowCertificatesComponent implements OnInit {
     this.service.getCertifikates().subscribe(data => {this.certificates = data; });
   }
 
+  displayCertificate(alias : string){
+    this.service.saveEach(alias).subscribe();
+    this.router.navigateByUrl('/showCertificates/each');
+  }
+
 }
