@@ -18,6 +18,7 @@
       <td>{{i+1}}</td>
       <td>{{cert.alias}}</td>
       <td><button class = "btn btn-edit" (click) = "displayCertificate(cert.alias)">Details</button></td>
+      <td><button (click)="onClickMe(cert)">Unvalidate</button></td>
     </tr>
     </tbody>
  </table>

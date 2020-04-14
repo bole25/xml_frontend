@@ -16,8 +16,8 @@ export class CreateCertificateService {
     this.getValidUrl = 'http://localhost:8080/certificate/getValid';
   }
 
-  public createCertificate(subjectDataDTO: SubjectDataDTO, certificateType: string, alias: string): Observable<any>{
-    return this.http.post<any>(this.createCertificateUrl + '/' + certificateType + '/' + alias + '/' , subjectDataDTO);
+  public createCertificate(subjectDataDTO: SubjectDataDTO, certificateType: string, alias: string, template: string): Observable<any>{
+    return this.http.post<any>(this.createCertificateUrl + '/' + certificateType + '/' + alias +'/' + template + '/' , subjectDataDTO);
   }
 
   public getValidIntermediate(){

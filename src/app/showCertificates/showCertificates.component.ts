@@ -24,4 +24,7 @@ export class ShowCertificatesComponent implements OnInit {
     this.router.navigateByUrl('/showCertificates/each');
   }
 
+  onClickMe(c):void {
+    this.service.unvalidateCertificate(c);
+  }
 }
