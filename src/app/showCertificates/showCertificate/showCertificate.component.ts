@@ -11,8 +11,8 @@ import {ShowCertificateService} from './showCertificate.service';
 })
 
 export class ShowCertificateComponent implements OnInit{
-    alias : string;
-    certificate : CertificateDTO;
+    alias: string;
+    certificate: CertificateDTO;
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -22,29 +22,31 @@ export class ShowCertificateComponent implements OnInit{
       }
 
     ngOnInit(): void {
-      this.service.getCertifikate().subscribe(data => {this.certificate = data;});
+      this.service.getCertifikate().subscribe(data => {this.certificate = data; });
     }
 
-    downloadFile(alias : string){
-      
-      this.service.makeFile(alias).subscribe();
-      
-      document.getElementById("btnFile").hidden = true;
-      document.getElementById("btnYes").hidden = false;
-      document.getElementById("btnNo").hidden = false;
-      document.getElementById("text").hidden = false;
+    downloadFile(alias: string){
+
+      this.service.makeFile(alias).subscribe( result => {
+        // document.getElementById('btnFile').hidden = true;
+        document.getElementById('btnYes').hidden = false;
+        document.getElementById('btnNo').hidden = false;
+        document.getElementById('text').hidden = false;
+      });
+
+
     }
 
     noAction(){
-      document.getElementById("btnFile").hidden = false;
-      document.getElementById("btnYes").hidden = true;
-      document.getElementById("btnNo").hidden = true;
-      document.getElementById("text").hidden = true;
+      // document.getElementById('btnFile').hidden = false;
+      // document.getElementById('btnYes').hidden = true;
+      // document.getElementById('btnNo').hidden = true;
+      // document.getElementById('text').hidden = true;
 
 
     }
 
     yesAction(){
-      var s = 0;
+      const s = 0;
     }
 }

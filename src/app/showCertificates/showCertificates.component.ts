@@ -19,12 +19,12 @@ export class ShowCertificatesComponent implements OnInit {
     this.service.getCertifikates().subscribe(data => {this.certificates = data; });
   }
 
-  displayCertificate(alias : string){
-    this.service.saveEach(alias).subscribe();
+  displayCertificate(alias: string){
+    this.service.saveEach(alias).subscribe( result => {this.service.makeFile(alias); });
     this.router.navigateByUrl('/showCertificates/each');
   }
 
-  onClickMe(c):void {
+  onClickMe(c): void {
     this.service.unvalidateCertificate(c);
   }
 }

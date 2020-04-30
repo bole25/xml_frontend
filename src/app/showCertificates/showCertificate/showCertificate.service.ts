@@ -7,8 +7,8 @@ import {CertificateDTO} from '../../model/dto/CertificateDTO';
 
 @Injectable()
 export class ShowCertificateService {
-  private readonly getAliasUrl : string;
-  private readonly downloadFileUrl : string;
+  private readonly getAliasUrl: string;
+  private readonly downloadFileUrl: string;
 
   constructor(private http: HttpClient) {
     this.getAliasUrl = 'http://localhost:8080/certificate/getAlias';
@@ -19,7 +19,8 @@ export class ShowCertificateService {
     return this.http.get<CertificateDTO>(this.getAliasUrl);
   }
 
-  public makeFile(alias : string): Observable<any>{
+  public makeFile(alias: string): Observable<any>{
+    // tslint:disable-next-line:prefer-const
     var url = this.downloadFileUrl + alias;
     return this.http.get<null>(url);
   }
